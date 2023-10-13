@@ -48,9 +48,12 @@ function checkWinner() {
     if (homeResult > guestResult) {
         document.getElementById("homePara").style.color = "green";
         document.getElementById("guestPara").style.color = "red"; 
-    } else {
+    } else if (homeResult < guestResult) {
         document.getElementById("guestPara").style.color = "green"; 
         document.getElementById("homePara").style.color = "red";
+    } else {
+        document.getElementById("homePara").style.color = "red";
+        document.getElementById("guestPara").style.color = "red"; 
     }
 }
 
